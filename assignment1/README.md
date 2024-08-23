@@ -1,0 +1,61 @@
+###OUTPUT: 
+System Resource Monitoring Dashboard
+------------------------------------
+Top 10 Most Used Applications:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+ubuntu     12134 66.1  2.5 265768 203252 pts/2   R    22:15   2:31 stress --vm 1 --vm-bytes 256M --timeout 300
+ubuntu     12133 65.7  0.0   3620   384 pts/2    R    22:15   2:30 stress --cpu 2 --timeout 300
+ubuntu     12132 65.5  0.0   3620   384 pts/2    R    22:15   2:30 stress --cpu 2 --timeout 300
+root           1  0.0  0.1  22640 13696 ?        Ss   19:18   0:05 /usr/lib/systemd/systemd --system --deserialize=63
+root         980  0.0  0.2 1831816 18564 ?       Ssl  19:19   0:01 /snap/amazon-ssm-agent/7993/amazon-ssm-agent
+root        9104  0.0  0.3 288948 27136 ?        SLsl 20:27   0:00 /sbin/multipathd -d -s
+ubuntu     10862  0.0  0.0  14960  6936 ?        S    21:07   0:00 sshd: ubuntu@pts/2
+root       11695  0.0  0.2 373032 20864 ?        Ssl  22:13   0:00 /usr/libexec/packagekitd
+message+     625  0.0  0.0  10000  5504 ?        Ss   19:19   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+Network Monitoring:
+Concurrent Connections:
+1
+Packet Drops:
+Network Bandwidth Usage:
+monitoringsyst.sh: line 17: ifstat: command not found
+Disk Usage:
+9% used on /dev/root
+10% used on /dev/xvda16
+6% used on /dev/xvda15
+Partitions using more than 80%:
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        23G  1.9G   21G   9% /
+System Load:
+ 22:19:39 up  3:00,  2 users,  load average: 3.39, 1.91, 0.79
+CPU Usage Breakdown:
+Linux 6.8.0-1012-aws (ip-172-31-24-55)  08/23/24        _x86_64_        (2 CPU)
+
+22:19:39     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+22:19:40     all   73.23    0.00   25.25    0.00    0.00    0.00    1.52    0.00    0.00    0.00
+22:19:40       0   92.93    0.00    6.06    0.00    0.00    0.00    1.01    0.00    0.00    0.00
+22:19:40       1   53.54    0.00   44.44    0.00    0.00    0.00    2.02    0.00    0.00    0.00
+
+Average:     CPU    %usr   %nice    %sys %iowait    %irq   %soft  %steal  %guest  %gnice   %idle
+Average:     all   73.23    0.00   25.25    0.00    0.00    0.00    1.52    0.00    0.00    0.00
+Average:       0   92.93    0.00    6.06    0.00    0.00    0.00    1.01    0.00    0.00    0.00
+Average:       1   53.54    0.00   44.44    0.00    0.00    0.00    2.02    0.00    0.00    0.00
+Memory Usage:
+               total        used        free      shared  buff/cache   available
+Mem:           7.8Gi       834Mi       6.2Gi       928Ki       1.0Gi       6.9Gi
+Swap:             0B          0B          0B
+Swap Memory Usage:
+Process Monitoring:
+    PID    PPID CMD                         %MEM %CPU
+  12134   12131 stress --vm 1 --vm-bytes 25  1.3 66.1
+   9164       1 /usr/lib/snapd/snapd         0.3  0.0
+   9104       1 /sbin/multipathd -d -s       0.3  0.0
+    694       1 /usr/bin/python3 /usr/share  0.2  0.0
+  11695       1 /usr/libexec/packagekitd     0.2  0.0
+    633       1 /usr/bin/python3 /usr/bin/n  0.2  0.0
+    980       1 /snap/amazon-ssm-agent/7993  0.2  0.0
+   4867       1 /usr/lib/systemd/systemd-jo  0.1  0.0
+      1       0 /usr/lib/systemd/systemd --  0.1  0.0
+Service Monitoring:
+sshd is running
+nginx is running
+iptables is NOT running
